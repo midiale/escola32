@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Escolar32.Models.Aluno>
+
+<div class="container">
+
+    <div class="row">
+
+        <h1>Relação de Ex-alunos do Transporte Escolar 32</h1>
+
+        <table class="col-md-12">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Escola.EscolaNome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Endereco)
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+             @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Escola.EscolaNome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+
+                    <td>
+                        <a asp-action="Details" asp-controller="Admin" asp-route-id="@item.AlunoId">Detalhes</a> |
+                        <a asp-action="Edit" asp-controller="Admin" asp-route-id="@item.AlunoId">Editar</a> |
+                        <a asp-action="Delete" asp-controller="Admin" asp-route-id="@item.AlunoId">Apagar</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

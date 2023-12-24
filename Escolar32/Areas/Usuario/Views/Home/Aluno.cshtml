@@ -1,0 +1,117 @@
+﻿@model Escolar32.Models.Aluno
+
+<div class="row">
+   
+    <p>Usuário:<strong> @Model.NomeUsuario</strong>| Data do Cadastro: <strong>@Model.DataCadastro </strong></p>
+    <hr />
+    <h3><strong>@Html.DisplayFor(model => model.Nome)</strong></h3>
+    <a asp-action="Alterar" asp-route-id="@Model?.AlunoId">Editar</a>
+    <hr />
+    <dl>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataNasc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataNasc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mae)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mae)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pai)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pai)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cep)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cep)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumeroCasa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumeroCasa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone3)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.VanAnterior)
+            @Html.DisplayFor(model => model.VanAnterior)
+        </dt>
+        <dd class="col-sm-10">
+            <strong>@Html.DisplayNameFor(model => model.QualEscolar)</strong>
+            @Html.DisplayFor(model => model.QualEscolar)
+        </dd>
+        
+    </dl>
+        <hr />
+        <h3><strong>ESCOLA</strong></h3>
+        <hr />
+    <dl>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Escola.EscolaNome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Escola.EscolaNome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Serie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Serie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Periodo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Periodo)
+        </dd>
+    </dl>
+          
+ </div>

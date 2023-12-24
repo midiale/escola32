@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Escolar32.Models.Escola>
+
+<div class="container">
+
+<div class="row">
+    <h1>Lista de Escolas</h1>
+
+        <p>
+            <a asp-action="Create">Cadastrar Nova Escola</a>
+        </p>
+        <table class="col-md-12">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EscolaNome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Endereco)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EscolaNome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+                    <td>
+                            <a asp-action="Edit" asp-route-id="@item.EscolaId">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.EscolaId">Apagar</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+</div>

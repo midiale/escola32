@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Escolar 32</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Escolar32.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="topo container-fluid ">
+            <h1 class="h1">E &nbsp;S&nbsp; C&nbsp; O&nbsp; L&nbsp; A&nbsp; R&nbsp;&nbsp;   3&nbsp; 2</h1>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacao" aria-controls="navegacao" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navegacao">
+
+
+                    <ul class="navbar-nav col justify-content-center">
+
+                        <li class="nav-item me-sm-5">
+                            <a class="nav-link text-white" asp-area="Usuario" asp-controller="Home" asp-action="Aluno">Dados do Aluno</a>
+                        </li>
+                        <li class="nav-item me-sm-5">
+                            <a class="nav-link text-white" asp-area="Usuario" asp-controller="Pagamentos" asp-action="Pagamentos">Pagamentos</a>
+                        </li>
+                        <li class="nav-item me-sm-5">
+                            <a class="nav-link text-white" asp-area="Usuario" asp-controller="Contrato" asp-action="Contrato">Contrato</a>
+                        </li>
+                       
+                    </ul>
+                    @await Html.PartialAsync("_LoginPartial")
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
+                    }
+                    @if (User.IsInRole("Member"))
+                    {
+                        <a class="nav-link text-light" asp-area="Usuario" asp-controller="Home" asp-action="Aluno"></a>
+                    }
+                             
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <partial name="_Footer" />
+
+    <script src="~/js/JavaScript.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

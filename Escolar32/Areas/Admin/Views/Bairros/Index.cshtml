@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Escolar32.Models.Bairro>
+
+<div class="container">
+
+    <div class="row">
+
+        <h1>Lista de Bairros</h1>
+
+        <p>
+            <a asp-action="Create">Cadastrar Novo Bairro</a>
+        </p>
+        <table class="col-md-12">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BairroNome)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BairroNome)
+                    </td>
+                    <td>
+                       <a asp-action="Delete" asp-route-id="@item.BairroId">Apagar</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+</div>
