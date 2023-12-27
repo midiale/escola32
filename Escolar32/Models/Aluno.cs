@@ -20,8 +20,8 @@ namespace Escolar32.Models
         public string NomeUsuario { get; set; }
 
         [Required(ErrorMessage = "Informe a data de Nascimento")]
-        //[Range(typeof(DateTime), "1/1/2000", "31/12/2022")]
         [Display(Name = "Data de Nascimento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         [BindProperty, DataType(DataType.Date)]
 
         public DateTime DataNasc { get; set; }
@@ -115,11 +115,13 @@ namespace Escolar32.Models
 
         [Required(ErrorMessage = "Preencha o Campo")]
         [Display(Name = "Primeiro Pagamento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         [BindProperty, DataType(DataType.Date)]
         public DateTime InicioPgto { get; set; }
 
         [Required(ErrorMessage = "Preencha o Campo")]
         [Display(Name = "Último Pagamento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         [BindProperty, DataType(DataType.Date)]
         public DateTime FimPgto { get; set; }
 
@@ -140,16 +142,18 @@ namespace Escolar32.Models
 
         [Required(ErrorMessage = "Preencha o Campo")]
         [Display(Name = "Inicio do Transporte")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         [BindProperty, DataType(DataType.Date)]
         public DateTime DataInicio { get; set; }
 
         [Display(Name = "Fim do Transporte")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         [BindProperty, DataType(DataType.Date)]
         public DateTime DataFim { get; set; }
 
         [Display(Name = "Data do Cadastro")]
         [DataType(DataType.Text)]
-        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         public DateTime DataCadastro { get; set; }
 
         [Display(Name = "Ex Aluno")]

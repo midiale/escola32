@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Escolar32.Services;
+using System.Globalization;
 
 namespace Escolar32.Areas.Admin.Controllers;
 
@@ -40,6 +41,8 @@ public class AdminContratoReportController : Controller
         var total = Conversor.EscreverExtenso(totalContrato);
         var valorParcela = _context.Alunos.Include(y => y.Escola).FirstOrDefault(a => a.AlunoId == Id).ValorParcela;
         var parcela = Conversor.EscreverExtenso(valorParcela);
+        var dataCadastro = _context.Alunos.FirstOrDefault(a => a.AlunoId == Id).DataCadastro;
+        var dataFormatada = dataCadastro.ToString("dd 'de' MMMM 'de' yyyy", new CultureInfo("pt-BR"));
         var webReport = new WebReport();
         webReport.Report.Load(Path.Combine(_webHostEnv.ContentRootPath,
                             "wwwroot/reports", "Contrato.frx"));
@@ -56,7 +59,8 @@ public class AdminContratoReportController : Controller
         webReport.Report.SetParameterValue("EscolaNome", escolaNome);
         webReport.Report.SetParameterValue("total", total);
         webReport.Report.SetParameterValue("Parcela", parcela);
-                
+        webReport.Report.SetParameterValue("DataCadastro", dataFormatada);
+
         return View(webReport);
     }
    
@@ -67,6 +71,8 @@ public class AdminContratoReportController : Controller
         var total = Conversor.EscreverExtenso(totalContrato);
         var valorParcela = _context.Alunos.Include(y => y.Escola).FirstOrDefault(a => a.AlunoId == Id).ValorParcela;
         var parcela = Conversor.EscreverExtenso(valorParcela);
+        var dataCadastro = _context.Alunos.FirstOrDefault(a => a.AlunoId == Id).DataCadastro;
+        var dataFormatada = dataCadastro.ToString("dd 'de' MMMM 'de' yyyy", new CultureInfo("pt-BR"));
         var webReport = new WebReport();
         webReport.Report.Load(Path.Combine(_webHostEnv.ContentRootPath,
                             "wwwroot/reports", "Contrato.frx"));
@@ -82,6 +88,7 @@ public class AdminContratoReportController : Controller
         webReport.Report.SetParameterValue("EscolaNome", escolaNome);
         webReport.Report.SetParameterValue("total", total);
         webReport.Report.SetParameterValue("Parcela", parcela);
+        webReport.Report.SetParameterValue("DataCadastro", dataFormatada);
 
         bool v = webReport.Report.Prepare();
 
