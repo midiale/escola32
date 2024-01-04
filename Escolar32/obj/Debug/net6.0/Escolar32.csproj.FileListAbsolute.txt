@@ -1,5 +1,6 @@
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Debug\net6.0\appsettings.json
+C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Debug\net6.0\libman.json
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Debug\net6.0\Escolar32.staticwebassets.runtime.json
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Debug\net6.0\Escolar32.exe
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Debug\net6.0\Escolar32.deps.json

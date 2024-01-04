@@ -26,7 +26,12 @@
         transform: translateX(-100%);
     }
 }
-
+.red-icon {
+    color: red;
+}
+.green-icon {
+    color: green;
+}
 
 @media(max-width: 575.98px) {
     /*estilos do header*/

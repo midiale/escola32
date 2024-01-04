@@ -7,7 +7,7 @@
         <h1>Lista de Bairros</h1>
 
         <p>
-            <a asp-action="Create">Cadastrar Novo Bairro</a>
+            <a class="fa-solid fa-file-circle-plus green-icon" asp-action="Create"></a>
         </p>
         <table class="col-md-12">
             <thead>
@@ -25,7 +25,7 @@
                         @Html.DisplayFor(modelItem => item.BairroNome)
                     </td>
                     <td>
-                       <a asp-action="Delete" asp-route-id="@item.BairroId">Apagar</a>
+                            <a class="fa-solid fa-trash-can red-icon" asp-action="Delete" asp-route-id="@item.BairroId"></a>
                     </td>
                 </tr>
         }

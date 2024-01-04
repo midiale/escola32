@@ -7,7 +7,7 @@
         <h1>Relação dos alunos cadastrados</h1>
 
         <p>
-            <a asp-action="Create">Novo Cadastro</a>
+            <a class="fa-solid fa-file-circle-plus  green-icon"asp-action="Create"></a>
         </p>
         <table class="col-md-12">
             <thead>
@@ -64,12 +64,14 @@
                         </td>
                 
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.AlunoId">Editar</a> |
-                            <a asp-action="Details" asp-route-id="@item.AlunoId">Detalhes</a>
 
+                            <a class="fa-solid fa-circle-info" asp-action="Details" asp-route-id="@item.AlunoId"></a>
+                            <a class="fa-regular fa-pen-to-square" asp-action="Edit" asp-route-id="@item.AlunoId"></a>
+                          
                         </td>
                     </tr>
                 }
+                <hr />
             </tbody>
         </table>
     </div>

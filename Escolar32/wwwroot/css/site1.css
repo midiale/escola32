@@ -1,0 +1,449 @@
+﻿@keyframes letras {
+
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes telefone {
+    0% {
+        transform: translateX(100%);
+    }
+
+    40% {
+        transform: translateX(0%);
+    }
+
+    60% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.red-icon {
+    color: red;
+}
+
+.green-icon {
+    color: green;
+}
+
+@media(max-width: 575.98px) {
+    /*estilos do header*/
+
+    .topo {
+        height: 100px;
+        background: yellow;
+    }
+
+    .h1 {
+        font-weight: bold;
+        font-size: 25px;
+        color: black;
+        animation-name: letras;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        text-align: center;
+    }
+
+    .whats {
+        float: left;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .telefone {
+        width: auto;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(35, 33, 33)
+    }
+
+        .telefone h1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            transform: translateX(100%);
+            animation: telefone 10s linear infinite;
+        }
+
+    .menu {
+        margin-left: 30px;
+    }
+
+    .radius {
+        border-radius: 10px;
+    }
+
+    /* estilo home*/
+
+    .mask-custom {
+        backdrop-filter: blur(4px);
+        background-color: rgba(101,110,53,0.6);
+    }
+
+    .texto {
+        font-family: Apple Chancery, cursive;
+        font-size: 18px;
+        text-indent: 4ch;
+    }
+
+    /* estilo escolas*/
+
+    .fotos {
+        height: 150px;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* estilo footer*/
+
+    .footer {
+        font-size: 8px;
+    }
+
+    .frase {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 767.98px) {
+
+    /*estilos do header*/
+
+    .topo {
+        height: 100px;
+        background: yellow;
+    }
+
+    .h1 {
+        font-weight: bold;
+        font-size: 35px;
+        color: black;
+        animation-name: letras;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        text-align: center;
+    }
+
+    .whats {
+        float: left;
+        margin-top: 10px;
+        margin-left: 40px;
+        text-align: center;
+    }
+
+    .telefone {
+        width: auto;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(35, 33, 33)
+    }
+
+        .telefone h1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            transform: translateX(100%);
+            animation: telefone 10s linear infinite;
+        }
+
+    .menu {
+        margin-left: 80px;
+    }
+
+    .radius {
+        border-radius: 10px;
+    }
+
+    /* estilo home*/
+
+    .mask-custom {
+        backdrop-filter: blur(4px);
+        background-color: rgba(101,110,53,0.6);
+    }
+
+    .texto {
+        font-family: Apple Chancery, cursive;
+        font-size: 18px;
+        text-indent: 4ch;
+    }
+    /* estilo escolas*/
+
+    .fotos {
+        height: 150px;
+        width: 150px;
+    }
+
+    /* estilo footer*/
+
+    .footer {
+        font-size: 10px;
+    }
+
+    .frase {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991.98px) {
+
+    /*estilos do header*/
+
+    .topo {
+        height: 100px;
+        background: yellow;
+    }
+
+    .h1 {
+        font-weight: bold;
+        font-size: 50px;
+        color: black;
+        animation-name: letras;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        text-align: center;
+    }
+
+    .whats {
+        float: left;
+        margin-top: 10px;
+        margin-left: 40px;
+        text-align: center;
+    }
+
+    .telefone {
+        width: auto;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(35, 33, 33)
+    }
+
+        .telefone h1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            transform: translateX(100%);
+            animation: telefone 10s linear infinite;
+        }
+
+    .menu {
+        margin-left: 120px;
+    }
+
+    .radius {
+        border-radius: 10px;
+    }
+
+    /* estilo do home*/
+
+    .mask-custom {
+        backdrop-filter: blur(4px);
+        background-color: rgba(101,110,53,0.6);
+    }
+
+    .texto {
+        font-family: Apple Chancery, cursive;
+        font-size: 18px;
+        text-indent: 4ch;
+    }
+
+    /* estilo escolas*/
+
+    .fotos {
+        height: 150px;
+        width: 150px;
+    }
+    /* estilo footer*/
+
+    .footer {
+        font-size: 15px;
+    }
+
+    .frase {
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1199.98px) {
+
+    /*estilos do header*/
+
+    .topo {
+        height: 100px;
+        background: yellow;
+    }
+
+    .h1 {
+        font-weight: bold;
+        font-size: 70px;
+        color: black;
+        animation-name: letras;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        text-align: center;
+    }
+
+    .whats {
+        float: left;
+        margin-top: 10px;
+        margin-left: 40px;
+        text-align: center;
+    }
+
+    .telefone {
+        width: auto;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(35, 33, 33)
+    }
+
+        .telefone h1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            transform: translateX(100%);
+            animation: telefone 10s linear infinite;
+        }
+
+    .menu {
+        margin-left: 230px;
+    }
+
+    .radius {
+        border-radius: 10px;
+    }
+
+    /* estilo home*/
+
+    .mask-custom {
+        backdrop-filter: blur(4px);
+        background-color: rgba(101,110,53,0.6);
+    }
+
+    .texto {
+        font-family: Apple Chancery, cursive;
+        font-size: 18px;
+        text-indent: 4ch;
+    }
+    /* estilo escolas*/
+
+    .fotos {
+        height: 180px;
+        width: 180px;
+    }
+    /* estilo footer*/
+
+    .footer {
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 1200px) {
+
+    /*estilos do header*/
+
+    .topo {
+        height: 100px;
+        background-color: yellow;
+    }
+
+    .h1 {
+        font-weight: bold;
+        font-size: 80px;
+        color: black;
+        animation-name: letras;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        text-align: center;
+    }
+
+    .whats {
+        float: left;
+        margin-top: 10px;
+        margin-left: 40px;
+        text-align: center;
+    }
+
+    .telefone {
+        width: auto;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(35, 33, 33)
+    }
+
+        .telefone h1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            transform: translateX(100%);
+            animation: telefone 10s linear infinite;
+        }
+
+    .menu {
+        margin-left: 340px;
+    }
+
+    .radius {
+        border-radius: 10px;
+    }
+
+    /* estilo home*/
+
+    .mask-custom {
+        backdrop-filter: blur(4px);
+        background-color: rgba(101,110,53,0.6);
+    }
+
+    .texto {
+        font-family: Apple Chancery, cursive;
+        font-size: 18px;
+        text-indent: 4ch;
+    }
+
+    /* estilo escolas*/
+
+    .fotos {
+        height: 200px;
+        width: 200px;
+    }
+}

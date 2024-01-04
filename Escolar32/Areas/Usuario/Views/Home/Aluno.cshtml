@@ -5,7 +5,7 @@
     <p>Usuário:<strong> @Model.NomeUsuario</strong>| Data do Cadastro: <strong>@Model.DataCadastro </strong></p>
     <hr />
     <h3><strong>@Html.DisplayFor(model => model.Nome)</strong></h3>
-    <a asp-action="Alterar" asp-route-id="@Model?.AlunoId">Editar</a>
+    <a class="fa-regular fa-pen-to-square" asp-action="Alterar" asp-route-id="@Model?.AlunoId"></a>
     <hr />
     <dl>
         <dt class="col-sm-2">

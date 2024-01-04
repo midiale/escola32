@@ -174,7 +174,9 @@
                 <strong>
                     <label asp-for="Aluno.Serie" class="control-label"></label>
                 </strong>
-                <input asp-for="Aluno.Serie" class="form-control" placeholder="Informe a série do aluno" />
+                <div>
+                @Html.DropDownListFor(s => s.Aluno.Serie, Model.ComboSeries, "Série")
+                </div>
                 <span asp-validation-for="Aluno.Serie" class="text-danger"></span>
             </div>
             <div class="form-group col-md-2">

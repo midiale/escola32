@@ -8,9 +8,7 @@
     <hr />
     <div class="row">
         <div class="col-md-12">
-            @* <div>
-                <img src="~/Imagens/em_construcao1.jpg" class="img-fluid">
-            </div> *@
+            
             <div class="row">
 
                 <div class="col-sm-3">
@@ -19,7 +17,14 @@
                             @Html.DisplayNameFor(model => model.Jan)
                         </dt>
                         <dd>
-                            @Html.DisplayFor(model => model.Jan)
+                            @if (Model.Jan)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -29,7 +34,14 @@
                             @Html.DisplayNameFor(model => model.Fev)
                         </dt>
                         <dd>
-                            @Html.DisplayFor(model => model.Fev)
+                            @if (Model.Fev)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -38,8 +50,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Mar)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Mar)
+                        <dd>
+                            @if (Model.Mar)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -48,8 +67,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Abr)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Abr)
+                        <dd>
+                            @if (Model.Abr)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -58,8 +84,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Mai)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Mai)
+                        <dd>
+                            @if (Model.Mai)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -68,8 +101,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Jun)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Jun)
+                        <dd>
+                            @if (Model.Jun)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -78,8 +118,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Jul)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Jul)
+                        <dd>
+                            @if (Model.Jul)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -88,8 +135,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Ago)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Ago)
+                        <dd>
+                            @if (Model.Ago)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -98,8 +152,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Set)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Set)
+                        <dd>
+                            @if (Model.Set)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -108,8 +169,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Out)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Out)
+                        <dd>
+                            @if (Model.Out)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -118,8 +186,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Nov)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Nov)
+                        <dd>
+                            @if (Model.Nov)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>
@@ -128,8 +203,15 @@
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Dez)
                         </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Dez)
+                        <dd>
+                            @if (Model.Dez)
+                            {
+                                <span class="indicador green-icon">&#10003;</span>
+                            }
+                            else
+                            {
+                                <span class="indicador red-icon">&#10007;</span>
+                            }
                         </dd>
                     </dl>
                 </div>

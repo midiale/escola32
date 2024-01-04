@@ -60,7 +60,7 @@ namespace Escolar32.Models
         public string Telefone3 { get; set; }
 
         [Required(ErrorMessage = "Preencha S ou N")]
-        [Display(Name = "Já utilizou transporte Escolar?")]
+        [Display(Name = "Utilizou transporte Escolar?")]
         public bool VanAnterior { get; set; }
 
         [Display(Name = "Qual ?")]
@@ -82,7 +82,7 @@ namespace Escolar32.Models
 
         [StringLength(50, MinimumLength = 10, ErrorMessage = "O tamanho deve ser entre 10 e 50 caracteres")]
         [Required(ErrorMessage = "Informe o nome Responsável Financeiro")]
-        [Display(Name = "Nome do responsável")]
+        [Display(Name = "Nome do responsável financeiro")]
         public string RespFinan { get; set; }
 
         [StringLength(20, ErrorMessage = "O tamanho máximo é 20 caracteres")]
@@ -127,12 +127,12 @@ namespace Escolar32.Models
 
         [Required(ErrorMessage = "Informe o valor da parcela")]
         [Column(TypeName = "decimal(10,2)")]
-        [Display(Name = "Valor da Parcela")]
+        [Display(Name = "Valor Parcela")]
         [Range(0, double.MaxValue, ErrorMessage = "O valor da parcela deve ser maior que 0")]
         public decimal ValorParcela { get; set; }
         
         //[Range(1, 12)]
-        [Display(Name = "Quant. Parcelas")]
+        [Display(Name = "Qt. Parcelas")]
         [Range(0, double.MaxValue, ErrorMessage = "A quantidade das parcela deve ser maior que 1")]
         public int QtdeParcelas { get; set; }
          
@@ -182,7 +182,7 @@ namespace Escolar32.Models
         public bool Nov { get; set; }
 
         public bool Dez { get; set; }
-
+        
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (DataInicio < DataCadastro)

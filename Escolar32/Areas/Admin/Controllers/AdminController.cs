@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Escolar32.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
+using Newtonsoft.Json.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Escolar32.Areas.Admin.Controllers
 {
@@ -59,25 +61,37 @@ namespace Escolar32.Areas.Admin.Controllers
         {
 
             var cadastro = new CadastroViewModel();
+            cadastro.Aluno = new Aluno();
 
             var ListaEscolas = _context.Escolas.ToList();
-            var ListaBairros = _context.Bairros.ToList();
-
+            
             cadastro.ComboEscolas = new List<SelectListItem>();
-            cadastro.ComboBairros = new List<SelectListItem>();
+            cadastro.ComboSeries = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Mat", Text = "Mat" },
+                new SelectListItem { Value = "Jd", Text = "Jd" },
+                new SelectListItem { Value = "Pré", Text = "Pré" },
+                new SelectListItem { Value = "1°", Text = "1°" },
+                new SelectListItem { Value = "2°", Text = "2°" },
+                new SelectListItem { Value = "3°", Text = "3°" },
+                new SelectListItem { Value = "4°", Text = "4°" },
+                new SelectListItem { Value = "5°", Text = "5°" },
+                new SelectListItem { Value = "6°", Text = "6°" },
+                new SelectListItem { Value = "7°", Text = "7°" },
+                new SelectListItem { Value = "8°", Text = "8°" },
+                new SelectListItem { Value = "9°", Text = "9°" },
+                new SelectListItem { Value = "1°M", Text = "1°M" },
+                new SelectListItem { Value = "2°M", Text = "2°M" },
+                new SelectListItem { Value = "3°M", Text = "3°M" },
+
+
+            };
 
             foreach (var item in ListaEscolas)
             {
                 var newItem = new SelectListItem { Value = item.EscolaId.ToString(), Text = item.EscolaNome };
 
                 cadastro.ComboEscolas.Add(newItem);
-            }
-
-            foreach (var item in ListaBairros)
-            {
-                var newItem = new SelectListItem { Value = item.BairroId.ToString(), Text = item.BairroNome };
-
-                cadastro.ComboBairros.Add(newItem);
             }
 
             return View(cadastro);
@@ -99,13 +113,31 @@ namespace Escolar32.Areas.Admin.Controllers
             aluno.FimPgto = aluno.InicioPgto.AddMonths((aluno.QtdeParcelas-1));
                                     
             var cadastro = new CadastroViewModel();
+            cadastro.Aluno = new Aluno();
 
             var ListaEscolas = _context.Escolas.ToList();
-            var ListaBairros = _context.Bairros.ToList();
 
+            cadastro.ComboSeries = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Mat", Text = "Mat" },
+                new SelectListItem { Value = "Jd", Text = "Jd" },
+                new SelectListItem { Value = "Pré", Text = "Pré" },
+                new SelectListItem { Value = "1°", Text = "1°" },
+                new SelectListItem { Value = "2°", Text = "2°" },
+                new SelectListItem { Value = "3°", Text = "3°" },
+                new SelectListItem { Value = "4°", Text = "4°" },
+                new SelectListItem { Value = "5°", Text = "5°" },
+                new SelectListItem { Value = "6°", Text = "6°" },
+                new SelectListItem { Value = "7°", Text = "7°" },
+                new SelectListItem { Value = "8°", Text = "8°" },
+                new SelectListItem { Value = "9°", Text = "9°" },
+                new SelectListItem { Value = "1°M", Text = "1°M" },
+                new SelectListItem { Value = "2°M", Text = "2°M" },
+                new SelectListItem { Value = "3°M", Text = "3°M" },
+
+            };
             cadastro.ComboEscolas = new List<SelectListItem>();
-            cadastro.ComboBairros = new List<SelectListItem>();
-
+            
             foreach (var item in ListaEscolas)
             {
                 var newItem = new SelectListItem { Value = item.EscolaId.ToString(), Text = item.EscolaNome };
@@ -129,7 +161,7 @@ namespace Escolar32.Areas.Admin.Controllers
         public IActionResult Review()
         {
             var cadastro = new CadastroViewModel();
-
+            
             var ListaEscolas = _context.Escolas.ToList();
             
             cadastro.ComboEscolas = new List<SelectListItem>();
@@ -153,10 +185,31 @@ namespace Escolar32.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             var cadastro = new CadastroViewModel();
+            cadastro.Aluno = new Aluno();
+
             var ListaEscolas = _context.Escolas.ToList();
                         
             cadastro.ComboEscolas = new List<SelectListItem>();
-            
+            cadastro.ComboSeries = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Mat", Text = "Mat" },
+                new SelectListItem { Value = "Jd", Text = "Jd" },
+                new SelectListItem { Value = "Pré", Text = "Pré" },
+                new SelectListItem { Value = "1°", Text = "1°" },
+                new SelectListItem { Value = "2°", Text = "2°" },
+                new SelectListItem { Value = "3°", Text = "3°" },
+                new SelectListItem { Value = "4°", Text = "4°" },
+                new SelectListItem { Value = "5°", Text = "5°" },
+                new SelectListItem { Value = "6°", Text = "6°" },
+                new SelectListItem { Value = "7°", Text = "7°" },
+                new SelectListItem { Value = "8°", Text = "8°" },
+                new SelectListItem { Value = "9°", Text = "9°" },
+                new SelectListItem { Value = "1°M", Text = "1°M" },
+                new SelectListItem { Value = "2°M", Text = "2°M" },
+                new SelectListItem { Value = "3°M", Text = "3°M" },
+
+            };
+
             foreach (var item in ListaEscolas)
             {
                 var newItem = new SelectListItem { Value = item.EscolaId.ToString(),
@@ -193,8 +246,29 @@ namespace Escolar32.Areas.Admin.Controllers
             aluno.FimPgto = aluno.InicioPgto.AddMonths((aluno.QtdeParcelas - 1));
 
             var cadastro = new CadastroViewModel();
+            cadastro.Aluno = new Aluno();
+
             var ListaEscolas = _context.Escolas.ToList();
-           
+
+            cadastro.ComboSeries = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Mat", Text = "Mat" },
+                new SelectListItem { Value = "Jd", Text = "Jd" },
+                new SelectListItem { Value = "Pré", Text = "Pré" },
+                new SelectListItem { Value = "1°", Text = "1°" },
+                new SelectListItem { Value = "2°", Text = "2°" },
+                new SelectListItem { Value = "3°", Text = "3°" },
+                new SelectListItem { Value = "4°", Text = "4°" },
+                new SelectListItem { Value = "5°", Text = "5°" },
+                new SelectListItem { Value = "6°", Text = "6°" },
+                new SelectListItem { Value = "7°", Text = "7°" },
+                new SelectListItem { Value = "8°", Text = "8°" },
+                new SelectListItem { Value = "9°", Text = "9°" },
+                new SelectListItem { Value = "1°M", Text = "1°M" },
+                new SelectListItem { Value = "2°M", Text = "2°M" },
+                new SelectListItem { Value = "3°M", Text = "3°M" },
+
+            };
             cadastro.ComboEscolas = new List<SelectListItem>();
             
             foreach (var item in ListaEscolas)

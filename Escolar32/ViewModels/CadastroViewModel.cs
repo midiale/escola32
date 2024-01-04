@@ -13,7 +13,8 @@ namespace Escolar32.ViewModels
 
         public List<SelectListItem> ComboEscolas { get; set; }
 
-        public List<SelectListItem> ComboBairros { get; set; }
+        public List<SelectListItem> ComboSeries { get; set; }
+        
 
     }
 }

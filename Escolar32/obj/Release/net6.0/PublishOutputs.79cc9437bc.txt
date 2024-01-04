@@ -1,6 +1,7 @@
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\Escolar32.exe
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\libman.json
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Cookies.dll

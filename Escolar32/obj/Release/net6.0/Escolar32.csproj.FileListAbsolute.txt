@@ -599,3 +599,4 @@ C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\refint
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\Escolar32.pdb
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\Escolar32.genruntimeconfig.cache
 C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\obj\Release\net6.0\ref\Escolar32.dll
+C:\Users\midia\Documents\UDEMY\MVC\Escolar32\Escolar32\bin\Release\net6.0\libman.json

@@ -120,8 +120,8 @@
     
     <hr />
     <div><h3><strong>CONTRATO</strong></h3>
-        <a asp-controller="AdminContratoReport" asp-action="ContratosReport2" asp-route-id="@Model?.AlunoId">Visualizar Contrato </a> |
-        <a asp-controller="AdminContratoReport" asp-action="ContratoPDF" asp-route-id="@Model?.AlunoId">Gerar Contrato PDF </a>
+        <a class="fa-regular fa-eye" asp-controller="AdminContratoReport" asp-action="ContratosReport2" asp-route-id="@Model?.AlunoId"></a> |
+        <a class="fa-regular fa-file-pdf red-icon" asp-controller="AdminContratoReport" asp-action="ContratoPDF" asp-route-id="@Model?.AlunoId"></a>
     </div>
         <hr />
     <dl>

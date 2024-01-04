@@ -6,7 +6,7 @@
     <h1>Lista de Escolas</h1>
 
         <p>
-            <a asp-action="Create">Cadastrar Nova Escola</a>
+            <a class="fa-solid fa-file-circle-plus green-icon" asp-action="Create"></a>
         </p>
         <table class="col-md-12">
             <thead>
@@ -30,8 +30,8 @@
                         @Html.DisplayFor(modelItem => item.Endereco)
                     </td>
                     <td>
-                            <a asp-action="Edit" asp-route-id="@item.EscolaId">Editar</a> |
-                            <a asp-action="Delete" asp-route-id="@item.EscolaId">Apagar</a>
+                            <a class="fa-regular fa-pen-to-square" asp-action="Edit" asp-route-id="@item.EscolaId"></a> |
+                            <a class="fa-solid fa-trash-can red-icon"asp-action="Delete" asp-route-id="@item.EscolaId"></a>
                     </td>
                 </tr>
         }
